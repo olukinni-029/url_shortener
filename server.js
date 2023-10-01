@@ -12,9 +12,7 @@ const __dirname = path.resolve();
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
-// connectDB(process.env.URL);
 app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 
 // Get the homepage
