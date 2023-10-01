@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
-const connectDB = (URL) => {
+const connectDB = (MONGODB_URL) => {
     mongoose.set('strictQuery', true);
-    return mongoose.connect(URL)
+    return mongoose.connect(MONGODB_URL)
   }
 export default connectDB;
