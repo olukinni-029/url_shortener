@@ -43,10 +43,10 @@ app.get("/", (req, res) => {
   });
 
   
-//   Redirecting the user
+//   Redirecting the user to original url
 app.get("/:id", async (req, res) => {
     try{
-        const id = req.query.id;
+        const id = req.params.id;
         const originalLink = await URL.findOne({ id });
         if (!originalLink) {
             // res.status(404).send('URL not found');
@@ -57,6 +57,7 @@ app.get("/:id", async (req, res) => {
         res.status(500).json("An error was encountered! Please try again.");
     }
   });
+
 
 const port = process.env.PORT||8080;
 
