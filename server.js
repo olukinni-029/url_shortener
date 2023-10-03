@@ -33,7 +33,7 @@ app.post("/link", validateURL, async (req, res) => {
     const id = nanoid(7);
     //   create and save the shortened url link
     const newURL = await URL.create({ url, id });
-    const shortenedUrl = `http://localhost:2450/${newURL.id}`;
+    const shortenedUrl = `https://url-shortener-7yq2.onrender.com/${newURL.id}`;
     // The shortened link: our server address with the unique id
     res.render(__dirname + "/public/shortenUrl.ejs", {
       shortenedUrl: shortenedUrl,
