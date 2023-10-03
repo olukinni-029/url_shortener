@@ -17,6 +17,7 @@ app.use(express.static(__dirname + "/public"));
 
 // Get the homepage
 app.get("/", (req, res) => {
+  console.log(req.hostname);
   res.render(__dirname + "/public/index.ejs");
 });
 
